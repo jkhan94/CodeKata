@@ -1,3 +1,5 @@
+package programmers;
+
 public class GetDay {
     // 1/1 금요일
     // 윤년이라 2월 29일 총 366일

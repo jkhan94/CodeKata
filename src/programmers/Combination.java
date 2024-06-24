@@ -1,3 +1,5 @@
+package programmers;
+
 public class Combination {
     public static void main(String[] args) {
         int[] number = {-2, 3, 0, 2, -5};

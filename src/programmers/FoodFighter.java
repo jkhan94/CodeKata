@@ -1,3 +1,5 @@
+package programmers;
+
 public class FoodFighter {
     // 1  2 3   0
     // 1 22 333 0 333 22 1

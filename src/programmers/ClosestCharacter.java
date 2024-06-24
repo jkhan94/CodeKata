@@ -1,3 +1,5 @@
+package programmers;
+
 import java.util.HashMap;
 
 public class ClosestCharacter {

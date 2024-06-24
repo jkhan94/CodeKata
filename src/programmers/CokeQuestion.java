@@ -1,3 +1,5 @@
+package programmers;
+
 public class CokeQuestion {
     // 빈 병 a개를 가져다 주면 마트가 주는 콜라 병 수 b
     // 빈 병 보유 수 n개

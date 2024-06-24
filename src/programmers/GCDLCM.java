@@ -1,3 +1,5 @@
+package programmers;
+
 public class GCDLCM {
     public static void main(String[] args) {
         int m = 5;

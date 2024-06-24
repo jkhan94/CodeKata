@@ -1,3 +1,5 @@
+package programmers;
+
 public class SubStringProgrammers {
     public static void main(String[] args) {
         String t = "5000";

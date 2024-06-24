@@ -1,3 +1,5 @@
+package programmers;
+
 public class CardPile {
     // goal에 있는 단어가 card1,2에 있는지 순서대로 확인
     public static void main(String[] args) {

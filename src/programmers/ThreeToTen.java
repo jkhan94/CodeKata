@@ -1,3 +1,5 @@
+package programmers;
+
 public class ThreeToTen {
     public static void main(String[] args) {
         int n = 45;

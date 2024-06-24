@@ -1,3 +1,5 @@
+package programmers;
+
 /*
 벽을 n개의 구역으로 분할
 m미터 롤러는 한 번에 m개 구역을 칠함
