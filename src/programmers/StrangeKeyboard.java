@@ -1,6 +1,7 @@
+package programmers;
+
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.Map;
 
 /*
 targets가 keymap에 없으면 -1
