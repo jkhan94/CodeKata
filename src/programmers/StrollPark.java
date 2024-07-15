@@ -1,3 +1,5 @@
+package programmers;
+
 public class StrollPark {
     public static void main(String[] args) {
         String[] park ={"OOOOO", "OOOOO", "OOSOO", "OOOOO", "OOOOO"};
