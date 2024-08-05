@@ -6,6 +6,7 @@ i*2 = 20
 i*3 = 30
 
 15가 되면 아래 연산 실행해서 인덱스가 30, 45, 20인 dp에 연산결과 저장.
+이걸 y가 나올때까지 반복. 반복했는데 dp[y]==0 이면 -1 리턴.
 */
 public class ConvertNumbers {
     public static void main(String[] args) {
