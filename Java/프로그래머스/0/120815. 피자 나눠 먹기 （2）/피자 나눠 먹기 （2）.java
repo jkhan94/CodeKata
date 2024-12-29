@@ -8,8 +8,6 @@ class Solution {
     
     public int solution(int n) {
         int totalPieces = (n*piece) / getGcd(n,piece);
-        System.out.println(totalPieces);
-        System.out.println(getGcd(n,piece));
         return totalPieces/piece;
     }
     
@@ -29,3 +27,18 @@ class Solution {
         return answer;
     }
 }
+/*
+// answer * 6 = n의 배수이므로 n으로 나누어떨어질 때까지 판 수를 더하면 됨
+class Solution {
+    public int solution(int n) {
+        int answer = 1;
+
+        while(true){
+            if(6*answer%n==0) break;
+            answer++;
+        }
+
+        return answer;
+    }
+}
+*/
