@@ -5,5 +5,6 @@ class Solution {
             answer[i] = strlist[i].length();
         }
         return answer;
+        // return Arrays.stream(strList).mapToInt(String::length).toArray();
     }
 }
