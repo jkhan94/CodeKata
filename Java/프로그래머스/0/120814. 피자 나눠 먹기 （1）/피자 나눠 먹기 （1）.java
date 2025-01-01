@@ -3,15 +3,15 @@
 아니면 n/7+1
 */
 class Solution {
-    static final int piece = 7; // 피자 1판 조각 수
+    static final int PIECE = 7; // 피자 1판 조각 수
     
     public int solution(int n) {
         int answer = 0;    
         
-        if(n%piece == 0){
-            answer = n/piece;
+        if(n%PIECE == 0){
+            answer = n/PIECE;
         } else {
-            answer = n/piece + 1;
+            answer = n/PIECE + 1;
         }
         
         return answer;
