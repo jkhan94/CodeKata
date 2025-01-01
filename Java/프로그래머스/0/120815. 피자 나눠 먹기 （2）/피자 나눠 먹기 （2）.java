@@ -4,11 +4,11 @@ answer * 6 = n의 배수
 6, n의 최소공배수
 */
 class Solution {
-    static final int piece = 6; // 1판 조각 수
+    static final int PIECE = 6; // 1판 조각 수
     
     public int solution(int n) {
-        int totalPieces = (n*piece) / getGcd(n,piece);
-        return totalPieces/piece;
+        int totalPieces = (n*PIECE) / getGcd(n,PIECE);
+        return totalPieces/PIECE;
     }
     
     private int getGcd(int n, int piece){
