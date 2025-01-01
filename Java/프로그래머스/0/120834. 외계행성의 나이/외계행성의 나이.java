@@ -1,7 +1,7 @@
 class Solution {
     public String solution(int age) {
         String answer = "";
-        char[] ages = new char[26];
+        char[] ages = new char[10];
         int ten = 10;
         
         for(int i = 0; i<ages.length; i++){
