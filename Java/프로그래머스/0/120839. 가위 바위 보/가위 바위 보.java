@@ -4,9 +4,9 @@
 보   5    2
 */
 class Solution {
-    private static final String scissor = "2";
-    private static final String rock = "0";
-    private static final String paper = "5";
+    private static final String SCISSOR = "2";
+    private static final String ROCK = "0";
+    private static final String PAPER = "5";
     
     public String solution(String rsp) {
         String answer = "";
@@ -16,14 +16,14 @@ class Solution {
         for(String r : rspArray){
             // if-else문도 됨
             switch(r){
-                case scissor:
-                    answer+=rock;
+                case SCISSOR:
+                    answer+=ROCK;
                     break;
-                case rock:
-                    answer+=paper;
+                case ROCK:
+                    answer+=PAPER;
                     break;
-                case paper:
-                    answer+=scissor;
+                case PAPER:
+                    answer+=SCISSOR;
                     break;
             }
         }
