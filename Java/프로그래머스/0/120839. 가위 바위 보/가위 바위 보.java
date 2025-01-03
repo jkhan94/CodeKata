@@ -10,8 +10,11 @@ class Solution {
     
     public String solution(String rsp) {
         String answer = "";
+        //  char[] cRsp = rsp.toCharArray();
         String[] rspArray = rsp.split("");
+        
         for(String r : rspArray){
+            // if-else문도 됨
             switch(r){
                 case scissor:
                     answer+=rock;
