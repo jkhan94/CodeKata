@@ -14,3 +14,19 @@ class Solution {
         return answer;
     }
 }
+/*
+class Solution {
+    public int[][] solution(int[] num_list, int n) {
+        int[][] answer = {};
+        int length = num_list.length;
+        answer = new int[length/n][n];
+
+        // n으로 나눴을 때 몫=행, 나머지=열
+        for(int i=0; i<length; i++){
+            answer[i/n][i%n]=num_list[i];
+        }
+
+        return answer;
+    }
+}
+*/
