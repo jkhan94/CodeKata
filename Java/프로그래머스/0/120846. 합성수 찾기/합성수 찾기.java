@@ -1,4 +1,4 @@
-/*class Solution {
+class Solution {
     public int solution(int n) {
         int answer = 0;
         
@@ -19,7 +19,7 @@
         return answer;
     }
 }
-*/
+/*
 class Solution {
     public int solution(int n) {
         int answer = 0;
@@ -35,3 +35,4 @@ class Solution {
         return answer;
     }
 }
+*/
