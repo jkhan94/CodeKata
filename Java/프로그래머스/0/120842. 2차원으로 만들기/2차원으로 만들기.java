@@ -1,3 +1,4 @@
+/*
 class Solution {
     public int[][] solution(int[] num_list, int n) {
         int row = num_list.length/n;
@@ -14,7 +15,7 @@ class Solution {
         return answer;
     }
 }
-/*
+*/
 class Solution {
     public int[][] solution(int[] num_list, int n) {
         int[][] answer = {};
@@ -29,4 +30,3 @@ class Solution {
         return answer;
     }
 }
-*/
