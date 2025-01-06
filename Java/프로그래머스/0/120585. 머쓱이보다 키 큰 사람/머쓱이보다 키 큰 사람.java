@@ -8,6 +8,12 @@ class Solution {
         int answer = 0;
         Arrays.sort(array);
         
+        /*
+        for(int i : array) {
+            if(i > height) answer++;
+        }
+        */
+        
         for(int i=0; i<array.length; i++){
             if(array[i]>height){
                 answer = array.length  - i;
@@ -16,6 +22,7 @@ class Solution {
                 answer = 0;
             }
         }
+        
         return answer;
     }
 }
