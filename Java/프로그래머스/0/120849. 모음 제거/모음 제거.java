@@ -1,5 +1,8 @@
 class Solution {
     public String solution(String my_string) {
+        return my_string.replaceAll("[aeiou]", "");
+        
+        /*
         String answer = "";
         String[] my = my_string.split("");
         for(int i=0; i<my.length; i++){
@@ -10,8 +13,7 @@ class Solution {
             answer += my[i];
         }
         return answer;
-        
-         // return my_string.replaceAll("[aeiou]", "");
+        */
 
     }
 }
