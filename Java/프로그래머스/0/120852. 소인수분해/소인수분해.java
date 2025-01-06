@@ -13,7 +13,7 @@ class Solution {
                 while(n%i == 0){
                     n/=i;
                 }
-                answer.add(i);
+                answer.add(i); // 넣을 때부터 오름차순이므로 정렬 불필요
             }           
         }
         
