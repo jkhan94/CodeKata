@@ -15,3 +15,26 @@ class Solution {
         return answer;
     }
 }
+/*
+import java.util.*;
+
+class Solution {
+    public int solution(String s) {
+        int answer = 0;
+        Stack<Integer> stack = new Stack<>();
+
+        // 전부 스택에 넣지만 이어진 문자가 Z면 이전 문자 꺼냄
+        for (String w : s.split(" ")) {
+            if (w.equals("Z")) {
+                stack.pop();
+            } else {
+                stack.push(Integer.parseInt(w));
+            }
+        }
+        for (int i : stack) {
+            answer += i;
+        }
+        return answer;
+    }
+}
+*/
