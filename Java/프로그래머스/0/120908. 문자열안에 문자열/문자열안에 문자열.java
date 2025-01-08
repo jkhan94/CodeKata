@@ -4,5 +4,6 @@ class Solution {
             return 1;
         }
         return 2;
+        // return (str1.contains(str2)? 1: 2);
     }
 }
