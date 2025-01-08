@@ -1,3 +1,4 @@
+/*
 class Solution {
     public int solution(String s) {
         int answer = 0;
@@ -15,7 +16,7 @@ class Solution {
         return answer;
     }
 }
-/*
+*/
 import java.util.*;
 
 class Solution {
@@ -37,4 +38,3 @@ class Solution {
         return answer;
     }
 }
-*/
