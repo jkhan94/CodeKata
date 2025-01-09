@@ -1,4 +1,3 @@
-/*
 class Solution {
     public int solution(int[] array, int n) {
         int answer = 0;
@@ -18,7 +17,7 @@ class Solution {
         return answer;
     }
 }
-*/
+/*
 import java.util.*;
 
 class Solution {
@@ -34,3 +33,4 @@ class Solution {
         return array[0];
     }
 }
+*/
