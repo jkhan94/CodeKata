@@ -28,6 +28,6 @@ class Solution {
         
         Set<String> set = new LinkedHashSet<String>(Arrays.asList(answer));
         
-        return String.join("", set);
+        return String.join("", set); // 구분자, prefix, suffix, 배열
     }
 }
