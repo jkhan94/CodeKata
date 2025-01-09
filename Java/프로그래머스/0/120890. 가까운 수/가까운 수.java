@@ -1,3 +1,8 @@
+/*
+테스트 케이스 추가
+[9, 11, 12] 10 9
+[13, 11, 9] 10 9
+*/
 class Solution {
     public int solution(int[] array, int n) {
         int answer = 0;
