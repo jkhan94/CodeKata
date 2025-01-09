@@ -8,7 +8,6 @@
 Stream.of(임의 객체)...
 
 */
-/*
 import java.util.stream.Stream;
 
 class Solution {
@@ -29,8 +28,8 @@ class Solution {
         return answer;
     }
 }
-*/
 
+/*
 class Solution {
     public int solution(int order) {
         int answer = 0;
@@ -46,3 +45,4 @@ class Solution {
         return answer;
     }
 }
+*/
