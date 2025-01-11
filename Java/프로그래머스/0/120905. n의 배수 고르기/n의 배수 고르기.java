@@ -1,3 +1,6 @@
+/*
+배수 개수 세고, 숫자 따로 저장하는 게 속도가 더 빠름.
+*/
 class Solution {
     public int[] solution(int n, int[] numlist) {
         int count = 0;
