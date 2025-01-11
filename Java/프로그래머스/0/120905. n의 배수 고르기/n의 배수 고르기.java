@@ -1,3 +1,4 @@
+/*
 import java.util.*;
 class Solution {
     public int[] solution(int n, int[] numlist) {
@@ -9,6 +10,13 @@ class Solution {
             }
         }
         
-        return list.stream().mapToInt(Integer::intValue).toArray();
+        return list.stream().mapToInt(Integer::intValue).toArray();               
+    }
+}
+*/
+import java.util.*;
+class Solution {
+    public int[] solution(int n, int[] numList) {
+        return Arrays.stream(numList).filter(value -> value % n == 0).toArray();
     }
 }
