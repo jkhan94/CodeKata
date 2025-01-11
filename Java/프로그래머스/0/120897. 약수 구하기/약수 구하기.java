@@ -9,6 +9,7 @@
 9 
 [1,3,9]
 */
+/*
 import java.util.*;
 class Solution {
     public int[] solution(int n) {
@@ -26,5 +27,14 @@ class Solution {
         answer.sort(Comparator.naturalOrder());
         
         return answer.stream().mapToInt(Integer::intValue).toArray();
+    }
+}
+*/
+import java.util.stream.IntStream;
+import java.util.Arrays;
+
+class Solution {
+    public int[] solution(int n) {
+        return IntStream.rangeClosed(1, n).filter(i -> n % i == 0).toArray();
     }
 }
