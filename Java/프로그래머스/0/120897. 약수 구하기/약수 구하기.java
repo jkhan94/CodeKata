@@ -9,6 +9,21 @@
 9 
 [1,3,9]
 */
+import java.util.*;
+class Solution {
+    public int[] solution(int n) {
+        Set<Integer> answer = new HashSet<>();
+        
+        for(int i=1; i<=Math.sqrt(n); i++){
+            if(n%i == 0){
+                answer.add(i);
+                answer.add(n/i);
+            }
+        }        
+              
+        return answer.stream().mapToInt(Integer::intValue).sorted().toArray();
+    }
+}
 /*
 import java.util.*;
 class Solution {
@@ -30,6 +45,7 @@ class Solution {
     }
 }
 */
+/*
 import java.util.stream.IntStream;
 import java.util.Arrays;
 
@@ -38,3 +54,4 @@ class Solution {
         return IntStream.rangeClosed(1, n).filter(i -> n % i == 0).toArray();
     }
 }
+*/
