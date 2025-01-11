@@ -12,22 +12,6 @@
 import java.util.*;
 class Solution {
     public int[] solution(int n) {
-        Set<Integer> answer = new HashSet<>();
-        
-        for(int i=1; i<=Math.sqrt(n); i++){
-            if(n%i == 0){
-                answer.add(i);
-                answer.add(n/i);
-            }
-        }        
-              
-        return answer.stream().mapToInt(Integer::intValue).sorted().toArray();
-    }
-}
-/*
-import java.util.*;
-class Solution {
-    public int[] solution(int n) {
         List<Integer> answer = new ArrayList<>();
         
         for(int i=1; i<=Math.sqrt(n); i++){
@@ -44,7 +28,7 @@ class Solution {
         return answer.stream().mapToInt(Integer::intValue).toArray();
     }
 }
-*/
+
 /*
 import java.util.stream.IntStream;
 import java.util.Arrays;
@@ -52,6 +36,24 @@ import java.util.Arrays;
 class Solution {
     public int[] solution(int n) {
         return IntStream.rangeClosed(1, n).filter(i -> n % i == 0).toArray();
+    }
+}
+*/
+
+/*
+import java.util.*;
+class Solution {
+    public int[] solution(int n) {
+        Set<Integer> answer = new HashSet<>();
+        
+        for(int i=1; i<=Math.sqrt(n); i++){
+            if(n%i == 0){
+                answer.add(i);
+                answer.add(n/i);
+            }
+        }        
+              
+        return answer.stream().mapToInt(Integer::intValue).sorted().toArray();
     }
 }
 */
