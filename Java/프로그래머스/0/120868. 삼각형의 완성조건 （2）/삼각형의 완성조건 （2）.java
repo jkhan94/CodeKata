@@ -6,9 +6,7 @@ sides = {a,b}  (a < b)
     a+b > c > b => a-1개
 */
 class Solution {
-    public int solution(int[] sides) {
-        int a = Math.min(sides[0], sides[1]); 
-        
-        return 2*a-1;
+    public int solution(int[] sides) {        
+        return 2*Math.min(sides[0], sides[1]) -1;
     }
 }
