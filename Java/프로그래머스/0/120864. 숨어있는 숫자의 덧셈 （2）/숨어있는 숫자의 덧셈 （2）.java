@@ -8,7 +8,10 @@ class Solution {
         String[] my = my_string.replaceAll("[\\D]"," ").split(" ");
         
         for(String m:my){
-            if(m.matches("\\d+")){
+            // if(m.matches("\\d+")){
+            //     answer += Integer.parseInt(m);
+            // }
+            if(!m.equals(" ") && !m.equals("")){
                 answer += Integer.parseInt(m);
             }
         }
