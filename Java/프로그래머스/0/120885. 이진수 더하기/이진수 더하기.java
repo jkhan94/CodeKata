@@ -5,6 +5,8 @@ Integer.parseInt(String "숫자 문자열", int 진법);
 Integer.toBinaryString(decimal);
 10진수 -> 2진수
 
+Integer.toString(int 숫자, int 진법);
+
 */
 class Solution {
     public String solution(String bin1, String bin2) {
@@ -12,5 +14,6 @@ class Solution {
         int b2 = Integer.parseInt(bin2, 2);
 
         return Integer.toBinaryString(b1+b2);
+         // return Integer.toString(Integer.parseInt(bin1, 2) + Integer.parseInt(bin2, 2),2);
     }
 }
