@@ -1,5 +1,7 @@
 /*
 i~j까지 문자열로 저장해서 "k"가 몇 번 있는지 셈.
+그런데 문자열 반복문은 성능이 좋지 않아서 오래 걸림.
+자릿수별로 나눠서 카운트하는 게 빠름.
 */
 /*
 class Solution {
@@ -23,6 +25,7 @@ class Solution {
     }
 }
 */
+/*
 class Solution {
     public int solution(int i, int j, int k) {
         String str = "";
@@ -34,20 +37,21 @@ class Solution {
         return str.length() - str.replace(k+"", "").length();
     }
 }
-/*
+*/
+
 class Solution {
     public int solution(int i, int j, int k) {
-        int answer = 0;
+        int answer = 0;        
 
         for (int num = i; num <= j; num++){
             int tmp = num;
             while (tmp != 0){
-                if (tmp % 10 == k)
+                if (tmp % 10 == k){ // 자릿수가 k이면 +1
                     answer++;
+                }
                 tmp /= 10;
             }
         }
         return answer;
     }
 }
-*/
