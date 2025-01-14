@@ -2,6 +2,7 @@
 테스트케이스 추가
  ["right", "right", "right", "right", "right", "left"], [9, 5] [3,0]
 */
+/*
 class Solution {
     public int[] solution(String[] keyinput, int[] board) {
         int[] answer = {0,0}; // x y
@@ -44,5 +45,63 @@ class Solution {
         }        
         
         return answer;
+    }
+}
+*/
+import java.lang.Math;
+class Solution {
+    private String up = "up";
+    private String down = "down";
+    private String left = "left";
+    private String right = "right";
+    private int xPos = 0;
+    private int yPos = 1;
+    private int maxWidth = 0;
+    private int maxHeight= 0;
+    int[] answer = {0, 0};
+
+    public int[] solution(String[] keyinput, int[] board) {
+        maxWidth = board[xPos] / 2;
+        maxHeight = board[yPos] / 2;
+        for (String key : keyinput) {
+            move(key);
+        }
+        return answer;
+    }
+
+    private void move(String key) {
+        if (up.equals(key)) {
+            moveUp();
+        } else if (down.equals(key)) {
+            moveDown();
+        } else if (left.equals(key)) {
+            moveLeft();
+        } else {
+            moveRight();
+        }
+    }
+
+    private void moveUp() {
+        if (answer[yPos] < maxHeight) {
+            answer[yPos]++;
+        }
+    }
+
+    private void moveDown() {
+        if (answer[yPos] > maxHeight * -1) {
+            answer[yPos]--;
+        }
+    }
+
+    private void moveLeft() {
+        if (answer[xPos] > maxWidth * -1) {
+            answer[xPos]--;
+        }
+    }
+
+    private void moveRight() {
+        if (answer[xPos] < maxWidth) {
+            answer[xPos]++;
+        }
     }
 }
