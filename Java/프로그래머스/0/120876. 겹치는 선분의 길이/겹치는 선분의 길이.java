@@ -3,7 +3,6 @@
 각 선분별로 지나가는 점을 카운트, 카운트 횟수가 1 초과면 중복구간이므로 answer++
 -100 ~ 100이므로 총 200칸
 */
-/*
 class Solution {
     public int solution(int[][] lines) {
         int answer = 0;
@@ -24,7 +23,7 @@ class Solution {
         return answer;
     }
 }
-*/
+/*
 import java.util.*;
 class Solution {
     public int solution(int[][] lines) {
@@ -45,3 +44,4 @@ class Solution {
         return (int) map.values().stream().filter(i -> i > 1).count();
     }
 }
+*/
