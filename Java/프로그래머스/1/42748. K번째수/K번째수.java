@@ -3,7 +3,6 @@
 sort
 indexOf(k)
 */
-/*
 import java.util.Arrays;
 class Solution {
     public int[] solution(int[] array, int[][] commands) {
@@ -26,13 +25,15 @@ class Solution {
         return answer;
     }
 }
-*/
+
+
 /*
 Arrays.copyOf(원본 배열, 복사할 길이)
 Arrays.copyOfRang(복사할 원본 배열, 복사를 시작할 인덱스, 복사를 끝낼 인덱스)
 복사를 시작할 인덱스 ~ 복사를 끝낼 인덱스-1 까지 복사한다.
 출처: https://romcanrom.tistory.com/48
 */
+/*
 import java.util.Arrays;
 class Solution {
     public int[] solution(int[] array, int[][] commands) {
@@ -49,3 +50,4 @@ class Solution {
     }
 
 }
+*/
