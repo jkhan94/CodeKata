@@ -1,4 +1,3 @@
-/*
 import java.util.Arrays;
 class Solution {
     public int[] solution(int[] numbers) {
@@ -18,8 +17,9 @@ class Solution {
     }
     
 }
-*/
+
 // set은 중복을 허용하지 않으므로 처음부터 set에 넣는 것도 방법.
+/*
 import java.util.HashSet;
 import java.util.Set;
 class Solution {
@@ -33,4 +33,5 @@ class Solution {
         }
         return set.stream().sorted().mapToInt(Integer::intValue).toArray();
     }
-}
+
+    */
