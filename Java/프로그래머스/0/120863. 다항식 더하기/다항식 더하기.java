@@ -38,9 +38,7 @@ class Solution {
             } else {
                 answer = x+"x + "+c;
             }            
-        }
-        
-        
+        }       
                 
         return answer;
     }
