@@ -15,7 +15,6 @@
 1 1000 1
 1 100 1
 1 10 1
-
 */
 import java.util.*;
 class Solution {
