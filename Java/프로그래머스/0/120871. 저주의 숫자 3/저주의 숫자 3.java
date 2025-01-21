@@ -1,14 +1,17 @@
 /*
 3배수 아니고 3도 없으면 인덱스
 */
-/*
+
 class Solution {
     public int solution(int n) {
         int answer = 0;
         int temp = 1;
         
         for(int i=0; i<n; i++){
-            if(temp%3!=0 && !(temp+"").contains("3")){
+            // temp=""는 너무 느림. 메소드 쓰는 게 나음.
+            // Integer.toString(int i) > NPE 발생
+            // String.valueOf(Object o) > "null" 리턴
+            if(temp%3!=0 && !String.valueOf(temp).contains("3")){
                 answer = temp;
             } else {
                 i--;
@@ -19,7 +22,8 @@ class Solution {
         return answer;
     }
 }
-*/
+
+/*
 class Solution {
     public int solution(int n) {
         int answer = 0;
@@ -34,3 +38,4 @@ class Solution {
         return answer;
     }
 }
+*/
