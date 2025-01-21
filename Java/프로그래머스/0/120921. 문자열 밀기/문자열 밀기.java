@@ -2,6 +2,7 @@
 테스트케이스 추가
 "abc" "bca" 2
 */
+/*
 import java.util.*;
 class Solution {
     public int solution(String A, String B) {
@@ -22,5 +23,11 @@ class Solution {
         }
         
         return answer;
+    }
+}
+*/
+class Solution {
+    public int solution(String A, String B) {
+        return (B+B).indexOf(A);
     }
 }
