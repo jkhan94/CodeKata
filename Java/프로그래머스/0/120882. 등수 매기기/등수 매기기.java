@@ -11,9 +11,12 @@
 [100, 95, 95, 75, 75, 40, 20]
 
 테스트케이스 추가 
-[[80, 70], [70, 80], [70, 80], [30, 50], [90, 100], [100, 90], [100, 100], [10, 30]]
-[4, 4, 4, 7, 2, 2, 1, 8]
+[[1, 3], [3, 1], [2, 3], [3, 2], [1, 2], [1, 1]]
+[3, 3, 1, 1, 5, 6]
+
+그런데 전부 /2 하면, 합으로만 따져도 되지 않나.
 */
+/*
 import java.util.*;
 class Solution {
     public int[] solution(int[][] score) {
@@ -33,6 +36,32 @@ class Solution {
         for(int i=0; i<avg2.length; i++){
             for(int j=0; j<avg.size(); j++){
                 if(avg2[i] == avg.get(j)){
+                    answer[i] = j+1;
+                    break;
+                }
+            }
+        }
+        
+        return answer;
+    }
+}
+*/
+import java.util.*;
+class Solution {
+    public int[] solution(int[][] score) {
+        int[] answer = new int[score.length];
+        ArrayList<Integer> avg = new ArrayList<>();
+        
+        for(int i=0; i<answer.length; i++){
+            avg.add(score[i][0] + score[i][1]);
+            answer[i] = score[i][0] + score[i][1];
+        }
+
+        Collections.sort(avg, Collections.reverseOrder()); // DESC
+
+        for(int i=0; i<answer.length; i++){
+            for(int j=0; j<avg.size(); j++){
+                if(answer[i] == avg.get(j)){
                     answer[i] = j+1;
                     break;
                 }
