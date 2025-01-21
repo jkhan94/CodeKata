@@ -3,6 +3,7 @@
 서비스 치킨 수 : chicken/10
 chicken/10 + chicken%10 <10일 때까지 반복
 */
+/*
 class Solution {
     public int solution(int chicken) {
         int answer = 0;
@@ -15,6 +16,18 @@ class Solution {
             }                      
         }
         
+        return answer;
+    }
+}
+*/
+class Solution {
+    public int solution(int chicken) {
+        int answer = chicken/9;
+        
+        if(chicken>1 && chicken%9==0){
+            answer--;
+        }
+
         return answer;
     }
 }
