@@ -5,7 +5,7 @@
 테스트케이스 추가
 [0, 1, 2, 3, 4, 5] [4, 0, 2] [0, 1, 2]
 */
-
+import java.util.*;
 class Solution {
     public int[] solution(int[] arr, int[] query) {
         int start = 0;
@@ -18,13 +18,8 @@ class Solution {
                 start += query[i];
             }
         }
-
-        int[] answer = new int[end-start+1];
-        for(int i=start; i<=end; i++){
-            answer[i-start]=arr[i];
-        }
         
-        return answer;
+        return Arrays.copyOfRange(arr, start, end+1);
     }
 }
 
