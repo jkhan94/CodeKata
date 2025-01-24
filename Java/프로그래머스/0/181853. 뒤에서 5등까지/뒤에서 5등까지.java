@@ -1,3 +1,6 @@
+/* 
+Arrays.copyOfRange(배열, 시작 인덱스, 끝 인덱스)
+*/
 import java.util.*;
 class Solution {
     public int[] solution(int[] num_list) {
