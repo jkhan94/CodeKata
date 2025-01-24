@@ -13,6 +13,7 @@
 우좌
 하상
 */
+/*
 class Solution {
     public int[][] solution(int n) {
         int[][] answer = new int[n][n];
@@ -48,6 +49,34 @@ class Solution {
             colStart++; // 다은 좌우는 1칸 오른쪽부터 시작
         }
         
+        return answer;
+    }
+}
+*/
+class Solution {
+    public int[][] solution(int n) {
+        int[][] answer = new int[n][n];
+        int num = 1;
+        int x = 0, y = 0;
+        int dx[] = {1, 0, -1, 0}; // 우하좌상
+        int dy[] = {0, 1, 0, -1};
+        int direction = 0;
+
+        while (num <= n * n) {
+            answer[y][x] = num++;
+
+            int nx = x + dx[direction]; 
+            int ny = y + dy[direction];
+
+            if (nx < 0 || nx >= n || ny < 0 || ny >= n || answer[ny][nx] != 0) {
+                direction = (direction + 1) % 4; //범위 밖에 나갔을 때 방향전환
+                nx = x + dx[direction];
+                ny = y + dy[direction];
+            }
+            x = nx;
+            y = ny;
+        }
+
         return answer;
     }
 }
