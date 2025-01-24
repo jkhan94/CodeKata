@@ -16,7 +16,6 @@ class Solution {
     }
 }
 */
-/*
 class Solution {
     public int[] solution(int[] num_list) {        
         Arrays.sort(num_list); // ASC
@@ -24,9 +23,10 @@ class Solution {
         return Arrays.copyOfRange(num_list,5,num_list.length);
     }
 }
-*/
+/*
 class Solution {
     public int[] solution(int[] num_list) {
         return Arrays.stream(num_list).sorted().skip(5).toArray();
     }
 }
+*/
