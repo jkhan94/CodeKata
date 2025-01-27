@@ -1,3 +1,4 @@
+/*
 import java.util.*;
 class Solution {
     public String[] solution(String[] strArr) {
@@ -21,7 +22,7 @@ class Solution {
         return answer;
     }
 }
-/*
+*/
 import java.util.*;
 class Solution {
     public String[] solution(String[] strArr) {
@@ -35,7 +36,7 @@ class Solution {
             }
         }
         
-        return answer.toArray(new String[cnt]);
+        // return answer.toArray(new String[cnt]);
+        return answer.toArray(String[]::new);
     }
 }
-*/
