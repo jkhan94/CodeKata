@@ -6,13 +6,14 @@ public class Solution {
         String a = sc.next();
         
         StringBuffer answer= new StringBuffer();
-        String[] str = a.split("");
+        char temp = 'a';
         
-        for(int i=0; i<str.length; i++){
-            if(Character.isUpperCase(a.charAt(i))){
-                answer.append(str[i].toLowerCase());
-            } else if(Character.isLowerCase(a.charAt(i))){
-                answer.append(str[i].toUpperCase());
+        for(int i=0; i<a.length(); i++){
+            temp = a.charAt(i);
+            if(Character.isUpperCase(temp)){
+                answer.append(Character.toLowerCase(temp));
+            } else if(Character.isLowerCase(temp)){
+                answer.append(Character.toUpperCase(temp));
             }       
        }
         
