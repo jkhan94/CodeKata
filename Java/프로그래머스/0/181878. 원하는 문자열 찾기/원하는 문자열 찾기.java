@@ -3,7 +3,7 @@ class Solution {
         myString = myString.toLowerCase();
         pat = pat.toLowerCase();
         
-        if(myString.contains(pat)){
+        if(myString.indexOf(pat) != -1){
             return 1;
         } else {
             return 0;
