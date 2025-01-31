@@ -4,7 +4,7 @@ class Solution {
         
         if(n%2==0){
             for(int i=0; i<=n; i+=2){
-                answer+=Math.pow(i,2);
+                answer+=i*i;
             }
         } else {
             for(int i=1; i<=n; i+=2){
