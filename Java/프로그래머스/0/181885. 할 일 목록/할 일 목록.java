@@ -1,6 +1,7 @@
 class Solution {
     public String[] solution(String[] todo_list, boolean[] finished) {
         StringBuffer str = new StringBuffer();
+        
         for(int i=0; i<finished.length; i++){
             str = finished[i]==false ? str.append(todo_list[i]).append(",") : str;
         }
