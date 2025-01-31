@@ -1,11 +1,11 @@
 class Solution {
     public String[] solution(String[] todo_list, boolean[] finished) {
-        String str = "";
+        StringBuffer str = new StringBuffer();
         for(int i=0; i<finished.length; i++){
-            str = finished[i]==false ? str+todo_list[i]+"," : str;
+            str = finished[i]==false ? str.append(todo_list[i]).append(",") : str;
         }
 
-        return str.split(",");
+        return str.toString().split(",");
     }
 }
 /*
