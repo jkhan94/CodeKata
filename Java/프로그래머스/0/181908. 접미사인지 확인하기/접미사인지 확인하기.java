@@ -1,10 +1,24 @@
 /*
+boolean startsWith(String prefix)
+boolean endsWith(String suffix)
+*/
+class Solution {
+    public int solution(String my_string, String is_suffix) {
+        if(my_string.endsWith(is_suffix)) {
+            return 1;
+        }
+        return 0;
+    }
+}
+
+/*
 banana length = 6
 012345
 
 ana 345 length=3
 a 5 length=1 = length-idx
 */
+/*
 class Solution {
     public int solution(String my_string, String is_suffix) {
         int idx = my_string.lastIndexOf(is_suffix);
@@ -19,3 +33,4 @@ class Solution {
         return 0;
     }
 }
+*/
