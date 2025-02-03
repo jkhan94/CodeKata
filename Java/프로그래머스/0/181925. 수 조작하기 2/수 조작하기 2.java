@@ -1,6 +1,6 @@
 class Solution {
     public String solution(int[] numLog) {
-        StringBuilder answer = new StringBuilder(); // 실글스레드면 StringBuffer보다 우수
+        StringBuffer answer = new StringBuffer();
         int diff = 0;
         
         for(int i=0; i<numLog.length-1; i++){
