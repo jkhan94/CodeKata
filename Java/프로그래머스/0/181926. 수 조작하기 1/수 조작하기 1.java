@@ -1,6 +1,7 @@
 /*
 맵에 각 연산 종류를 저장해서 처리할 수도 있음
 그러나  각 연산의 횟수를 세서 최종값만 리턴하는 게 나을 듯.
+연산별로 바로 값 계산해도 되고.
 */
 import java.util.*;
 class Solution {
@@ -10,20 +11,20 @@ class Solution {
         for(int i=0; i<control.length(); i++){
             switch(control.charAt(i)){
                 case 'w':
-                   cnt[0]++;
+                   n++;
                    break;
                 case's':
-                   cnt[1]++;
+                   n--;
                    break;
                 case'd':
-                   cnt[2]++;
+                   n+=10;
                    break;
                 case'a':
-                  cnt[3]++;
+                  n-=10;
                   break;
             }
         }
         
-        return n + cnt[0] -cnt[1] + (cnt[2]- cnt[3])*10;
+        return n;
     }
 }
