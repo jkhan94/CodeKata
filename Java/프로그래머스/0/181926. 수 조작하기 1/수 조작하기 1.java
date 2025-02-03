@@ -8,8 +8,8 @@ class Solution {
     public int solution(int n, String control) {  
         int[] cnt = new int[4]; // wsda 연산 횟수
     
-        for(char c : control.toCharArray()){
-            switch(c){
+        for(int i=0; i<control.length(); i++){
+            switch(control.charAt(i)){
                 case 'w':
                    n++;
                    break;
