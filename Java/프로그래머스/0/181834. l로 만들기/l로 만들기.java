@@ -1,3 +1,13 @@
+/*
+[^l-z] : l ~ z가 아니면
+*/
+class Solution {
+    public String solution(String myString) {
+        // return myString.replaceAll("[^l-z]", "l");
+        return myString.replaceAll("[a-k]", "l");
+    }
+}
+/*
 class Solution {
     public String solution(String myString) {
         char[] answer = myString.toCharArray();
@@ -11,3 +21,4 @@ class Solution {
         return String.valueOf(answer);
     }
 }
+*/
