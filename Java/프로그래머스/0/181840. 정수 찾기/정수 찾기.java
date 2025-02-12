@@ -7,13 +7,13 @@ contains는 부분 문자열을 찾음. 30에 3이 있어서 1 리턴.
 import java.util.*;
 class Solution {
     public int solution(int[] num_list, int n) {
-        ArrayList<String> ans = new ArrayList<>();
+        ArrayList<Integer> ans = new ArrayList<>();
         
         for(int num : num_list){
-            ans.add(String.valueOf(num));
+            ans.add(new Integer(num));
         }
         
-        return ans.contains(String.valueOf(n))? 1:0;
+        return ans.contains(n)? 1:0;
     }
 }
 /*
