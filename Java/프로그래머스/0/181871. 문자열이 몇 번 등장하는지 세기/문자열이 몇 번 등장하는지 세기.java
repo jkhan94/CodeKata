@@ -6,6 +6,8 @@ class Solution {
         int cnt = 0;
         
         for(int i=0; i<myString.length(); i++) {
+            // 예외처리 불필요
+            // 잘라서 문자열이 같은지 비교하는 것보다, 잘랐을 때 문자열로 시작하는지 보면 됨.
             if(myString.substring(i).startsWith(pat)){
                 cnt++;
             }
