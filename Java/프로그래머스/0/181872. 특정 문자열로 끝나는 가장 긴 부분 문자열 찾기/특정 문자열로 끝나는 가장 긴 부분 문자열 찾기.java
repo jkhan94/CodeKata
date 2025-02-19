@@ -1,5 +1,6 @@
 class Solution {
     public String solution(String myString, String pat) {
-        return myString.substring(0,myString.lastIndexOf(pat)) + pat;
+        StringBuffer answer = new StringBuffer();
+        return answer.append(myString.substring(0,myString.lastIndexOf(pat))).append(pat).toString();
     }
 }
