@@ -5,7 +5,7 @@ class Solution {
         int temp = 0;
         
         for(String i : intStrs){
-            temp = Integer.valueOf(i.substring(s,s+l));
+            temp = Integer.parseInt(i.substring(s,s+l));
             if(temp > k){
                 answer.add(temp);
             }
