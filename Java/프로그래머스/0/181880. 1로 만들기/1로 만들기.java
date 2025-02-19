@@ -4,11 +4,8 @@ class Solution {
         
         for(int num : num_list){
             while(num>1){
-                if(num%2 == 0){
-                    num/=2;
-                } else {
-                    num = (num-1)/2;
-                }
+                // 정수형은 홀수든 짝수든 나누면 몫이 같음
+                num/=2;
                 answer++;
             }
         }
