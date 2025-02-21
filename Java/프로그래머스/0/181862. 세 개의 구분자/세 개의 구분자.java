@@ -1,15 +1,3 @@
-import java.util.Arrays;
-class Solution {
-    public String[] solution(String myStr) {
-        String[] arr = Arrays.stream(myStr.split("[abc]+"))
-                                .filter(str -> !str.isEmpty())
-                                .toArray(String[]::new);
-        
-        return arr.length == 0 ? new String[] { "EMPTY" } : arr;
-    }
-}
-
-/*
 import java.util.*;
 import java.util.stream.*;
 class Solution {
@@ -23,6 +11,17 @@ class Solution {
         }
 
         return answer.stream().toArray(String[]::new);
+    }
+}
+/*
+import java.util.Arrays;
+class Solution {
+    public String[] solution(String myStr) {
+        String[] arr = Arrays.stream(myStr.split("[abc]+"))
+                                .filter(str -> !str.isEmpty())
+                                .toArray(String[]::new);
+        
+        return arr.length == 0 ? new String[] { "EMPTY" } : arr;
     }
 }
 */
