@@ -14,12 +14,13 @@ class Solution {
             return new int[] {-1};
         }
         
-        for(int i=start; i<arr.length; i++){
+        for(int i=arr.length-1; i>=start; i--){
             if(arr[i] == 2){
                 end = i;
+                break;
             }
         }
-        
+
         int[] answer = new int[end - start +1];
         for(int i=start; i<=end; i++){
             answer[i-start] = arr[i];
