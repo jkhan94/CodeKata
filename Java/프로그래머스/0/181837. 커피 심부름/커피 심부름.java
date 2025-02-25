@@ -13,7 +13,7 @@ class Solution {
             if(o.contains("cafelatte")){
                 answer += CAFELATTE;
             } else {
-                answer+=AMERICANO;
+                answer += AMERICANO;
             }
         }
 
