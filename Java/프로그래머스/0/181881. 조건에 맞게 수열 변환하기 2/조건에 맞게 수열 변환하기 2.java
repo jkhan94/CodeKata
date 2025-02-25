@@ -7,6 +7,33 @@
 import java.util.*;
 class Solution {
     public int solution(int[] arr) {
+        int[] prev = arr.clone();
+        int x = 0;
+        
+        while(true){           
+            for(int i=0; i<arr.length; i++){
+                if(arr[i]>=50 && arr[i]%2 == 0){ // 50이상 짝수
+                    arr[i] /= 2;
+                } else if(arr[i]<50 && arr[i]%2 != 0){ // 50미만 홀수
+                    arr[i] = arr[i]*2 +1;
+                }
+            }
+            
+            if(Arrays.equals(prev, arr)){
+                break;
+            }
+            
+            prev = arr.clone();
+            x++;
+        }            
+        
+        return x;
+    }
+}
+/*
+import java.util.*;
+class Solution {
+    public int solution(int[] arr) {
         int[] arr2 = new int[arr.length];
         int x = -1;
         
@@ -26,3 +53,4 @@ class Solution {
         return x;
     }
 }
+*/
