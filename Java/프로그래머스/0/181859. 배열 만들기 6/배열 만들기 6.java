@@ -9,22 +9,22 @@ Stack은 벡터를 상속 받아 스택 메소드만 추가됨.
 import java.util.*;
 class Solution {
     public int[] solution(int[] arr) {
-        ArrayDeque<Integer> stk = new ArrayDeque<>();
+        ArrayList<Integer> stk = new ArrayList<>();
         
         for(int i=0; i<arr.length; i++){
             if(stk.isEmpty()){
-                stk.addLast(arr[i]);
+                stk.add(arr[i]);
             } else {
-                if(stk.getLast() == arr[i]){
-                    stk.removeLast();
+                if(stk.get(stk.size()-1) == arr[i]){
+                    stk.remove(stk.size()-1);
                 } else {
-                    stk.addLast(arr[i]);
+                    stk.add(arr[i]);
                 }
             }
         }
         
         if(stk.isEmpty()){
-            stk.push(-1);
+            stk.add(-1);
         }
         
         return stk.stream().mapToInt(Integer::intValue).toArray();
