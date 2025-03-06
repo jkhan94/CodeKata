@@ -10,6 +10,24 @@
 ["u", "u"] []
 ["r", "u", "d", "d"] ["u", "d", "d"]
 */
+
+import java.util.Arrays;
+class Solution {
+    public String[] solution(String[] str_list) {
+        // 순서대로 순회하면서 먼저 나온 걸 기준으로 반환
+        for (int i = 0; i < str_list.length; i++) {
+            if ("l".equals(str_list[i])) {
+                return Arrays.copyOfRange(str_list, 0, i);
+            } else if ("r".equals(str_list[i])) {
+                return Arrays.copyOfRange(str_list, i + 1, str_list.length);
+            }
+        }
+
+        return new String[0];
+    }
+}
+
+/*
 import java.util.*;
 class Solution {
     public String[] solution(String[] str_list) {
@@ -30,3 +48,4 @@ class Solution {
         return answer;
     }
 }
+*/
