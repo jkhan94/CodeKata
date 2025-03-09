@@ -3,7 +3,6 @@ class Solution {
     public int[] solution(int[] arr, int k) {
         ArrayList<Integer> temp = new ArrayList<>();
         int[] answer = new int[k];        
-        int idx=0;
         
         Arrays.fill(answer, -1);
         
@@ -13,11 +12,8 @@ class Solution {
             }           
         }
         
-        for(int i=0; i<answer.length; i++){  
-            answer[i] = temp.get(idx++);                  
-            if(idx>= temp.size()){
-                break;
-            }
+        for(int i=0, idx=0; i<answer.length && idx<temp.size(); i++, idx++){  
+            answer[i] = temp.get(idx);                  
         }
         
         return answer;
