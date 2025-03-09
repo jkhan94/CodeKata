@@ -8,10 +8,8 @@ class Solution {
         int idx=0;
         
         for(String p : picture){
-            for(int i=0; i<p.length(); i++){
-                for(int j=0; j<k; j++){
-                    temp.append(p.charAt(i));
-                }
+            for(int i=0; i<p.length(); i++){               
+                temp.append(String.valueOf(p.charAt(i)).repeat(k));                
             }
             for(int j=0; j<k; j++){
                 answer[idx++] = temp.toString();
