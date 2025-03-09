@@ -3,7 +3,10 @@ class Solution {
         String bef = my_string.substring(0,s);
         String aft = my_string.substring(s+overwrite_string.length(), my_string.length());
         
-        return bef + overwrite_string + aft;
+        StringBuffer answer = new StringBuffer();
+        answer.append(bef).append(overwrite_string).append(aft);
+        
+        return answer.toString();
     }
 }
 /*
