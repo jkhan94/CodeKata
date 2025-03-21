@@ -9,8 +9,7 @@ class Solution {
         
         
         for(int i=0; i<n; i++){
-            answer[i] = Integer.toBinaryString(arr1[i] | arr2[i]);
-            answer[i] = String.format(format,answer[i]);
+            answer[i] = String.format(format,Integer.toBinaryString(arr1[i] | arr2[i]));
             answer[i] = answer[i].replaceAll("1","#");
             answer[i] = answer[i].replaceAll("0"," ");
         }
