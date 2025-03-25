@@ -28,6 +28,8 @@ class Solution {
             budget-=m;
             if(budget>=0){
                 answer++;
+            } else {
+                break;
             }
         }
         
