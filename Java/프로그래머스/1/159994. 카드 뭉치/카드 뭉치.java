@@ -1,3 +1,4 @@
+/*
 // goal에 있는 단어가 card1,2에 있는지 순서대로 확인
 class Solution {
     public String solution(String[] cards1, String[] cards2, String[] goal) {
@@ -27,7 +28,7 @@ class Solution {
         return answer;
     }
 }
-/*
+*/
 import java.io.*;
 
 class Solution {
@@ -52,4 +53,3 @@ class Solution {
         return "Yes";
     }
 }
-*/
