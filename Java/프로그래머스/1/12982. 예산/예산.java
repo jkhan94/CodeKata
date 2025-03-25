@@ -26,11 +26,10 @@ class Solution {
         
         for(int m : d){
             budget-=m;
-            if(budget>=0){
-                answer++;
-            } else {
+            if(budget<0){                
                 break;
             }
+            answer++;
         }
         
         return answer;
