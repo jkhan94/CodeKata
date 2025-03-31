@@ -10,6 +10,62 @@
 테스트케이스 추가
 4 [1,1,1,1,1,1] [1,2,3,4]
 */
+// 메소드 오버라이딩을 통한 comparable 방식
+import java.util.*;
+class Solution {
+    public int[] solution(int N, int[] stages) {
+        int[] answer = new int[N];
+        int[] uncleared = new int[N+2];
+        int[] reached = new int[N+2];
+        double failRatio = 0.0;
+        List<Stage> failList = new ArrayList<>();
+        
+        for(int s : stages){           
+            uncleared[s]++;            
+        }
+        reached[N+1] = uncleared[N+1]; // 올클
+        for(int i=N; i>=1; i--){
+            reached[i] = uncleared[i] + reached[i+1]; // 해당 스테이지 미클 + 클리어한 유저
+        }
+        
+        for(int i=1; i<=N; i++){
+            failRatio = reached[i]==0? 0.0 : (double)uncleared[i]/reached[i];
+            failList.add(new Stage(i, failRatio));
+        }
+        
+        // 클래스에서 Comparable 방식
+        Collections.sort(failList);
+        
+        for (int i=0; i<N; i++) {
+            answer[i] = failList.get(i).stageNumber;
+        }       
+                
+        return answer;
+    }
+    
+    static class Stage implements Comparable<Stage> {
+        int stageNumber;
+        double failRatio;
+        
+        Stage(int stageNumber, double failRatio) {
+            this.stageNumber = stageNumber;
+            this.failRatio = failRatio;
+        }     
+        
+        @Override
+        public int compareTo(Stage other) {
+            // this(현 객체) 전달 후 other(인수) 전달
+            // (a.b) = (this,other)
+            if (Double.compare(other.failRatio, this.failRatio) == 0) {
+                return Integer.compare(this.stageNumber, other.stageNumber);
+            }
+            return Double.compare(other.failRatio, this.failRatio);
+        }
+    }
+}
+
+/*
+// 람다식을 활용한 Comparator 방식
 import java.util.*;
 class Solution {
     public int[] solution(int N, int[] stages) {
@@ -64,6 +120,7 @@ class Solution {
         }        
     }
 }
+*/
 
 /*
 import java.util.*;
